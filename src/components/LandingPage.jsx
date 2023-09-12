@@ -1,0 +1,37 @@
+import React from 'react'
+import { Link } from 'react-router-dom';
+function LandingPage() {
+  return (
+    <div className='home-container h-screen bg-[url("https://img.freepik.com/free-photo/blue-surface-with-study-tools_23-2147864592.jpg")] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center'>
+       
+       <h1 className='text-6xl font-bold text-blue-600 mb-2 ml-1'>Welcome to a Free Mind Blog Post</h1>
+       <h2 className='text-3xl text-black-700 font-bold mb-8'>your place to share your thoughts and ideas.</h2>
+
+       <div className='navigation-links flex space-x-4'> 
+           <Link to="/login" className="bg-blue-600 text-white font-bold px-4 py-2 rounded hover:bg-blue-700 transition duration-300 ease-in-out">LOGIN</Link>
+           <Link to="/register" className="bg-blue-600 text-white font-bold px-4 py-2 rounded hover:bg-blue-700 transition duration-300 ease-in-out">REGISTER</Link>
+       </div>
+    </div>
+  )
+}
+export default LandingPage;
+
+
+// function LandingPage() {
+//   return (
+//     <div className='home-container bg-[url("https://img.freepik.com/free-photo/blue-surface-with-study-tools_23-2147864592.jpg")] bg-cover bg-no-repeat bg-center'>
+//       {/* Logo or Brand Name */}
+//       <h1 className='text-4xl font-bold text-blue-600 mb-2'>Welcome to a Free Mind Blog Post</h1>
+      
+//       <h2 className='text-2xl text-black-700 font-bold mb-6'>your place to share your thoughts and ideas.</h2>
+      
+//       <div className='space-x-4'> 
+//           <Link to="/login" className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700'>Login</Link>
+//           <Link to="/register" className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700'>Register</Link>
+//       </div>
+//     </div>
+//   )
+// }
+
+
+//export default LandingPage;
