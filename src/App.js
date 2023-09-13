@@ -4,7 +4,7 @@ import './styles/index.css';
 import LandingPage from './components/LandingPage';
 import Login from './components/Login';
 import Register from './components/Register';
-import ProtectedRoute from './components/ProtectedRoute'; // Import the ProtectedRoute component
+import ProtectedRoute from './components/ProtectedRoute'; 
 import Dashboard from './components/Dashboard';
 
 function App() {
