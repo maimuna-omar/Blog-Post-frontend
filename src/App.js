@@ -6,7 +6,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import ProtectedRoute from './components/ProtectedRoute'; 
 import Dashboard from './components/Dashboard';
-
+import CreatePost from './components/CreatePost';
 function App() {
   return (
     <div className="App flex flex-col min-h-screen bg-blue-100">
@@ -15,20 +15,19 @@ function App() {
       </div>
       
       <div className="flex-grow">
-        <Routes>
-          <Route path="/" element={<LandingPage />}  />
-          <Route path="/login" element={<Login />}  />
-          <Route path="/register" element={<Register />}  />
-          <Route 
-            path="/dashboard" 
-            element={
-              <ProtectedRoute>
+    <Routes>
+        <Route path="/" element={<LandingPage />}  />
+        <Route path="/login" element={<Login />}  />
+        <Route path="/register" element={<Register />}  />
+        <Route path="/dashboard" element={
+            <ProtectedRoute>
                 <Dashboard />
-              </ProtectedRoute>
-               } 
-               />
-        </Routes>
-      </div>
+            </ProtectedRoute>
+        }/>
+        <Route path="/createpost" element={<ProtectedRoute><CreatePost /></ProtectedRoute>}  />
+    </Routes>
+</div>
+
     </div>
   );
 }
