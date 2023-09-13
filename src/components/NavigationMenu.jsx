@@ -45,21 +45,7 @@ function NavigationMenu() {
             CREATE POST
           </Link>
         </li>
-        {/* <li>
-          <Link to="/dashboard/edit-profile" className="text-black font-extrabold hover:text-yellow-500">
-            EDIT PROFILE
-          </Link>
-        </li>
-        <li>
-          <Link to="/dashboard/notifications" className="text-black font-extrabold hover:text-yellow-500">
-            NOTIFICATIONS
-          </Link>
-        </li> */}
-
-          {/* <Link to="/dashboard/editpost/:postId" className="text-black font-extrabold hover:text-yellow-500">
-            EDIT POST
-          </Link> */}
-
+       
 
         <li>
           <button
