@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate from react
 
 function CreatePost() {
     const [post, setPost] = useState({ title: '', content: '' });
-    const baseURL = "http://127.0.0.1:3001";
+    const baseURL = "https://blogpost-backend-v3oj.onrender.com";
     const navigate = useNavigate(); // Initialize useNavigate
 
     const handleChange = (e) => {

@@ -8,7 +8,7 @@ function NavigationMenu() {
     // Get token from localStorage
     const token = localStorage.getItem('token');
   
-    const baseURL = "http://127.0.0.1:3001/logout";
+        const baseURL = "https://blogpost-backend-v3oj.onrender.com/logout";
   
     try {
       const response = await fetch(baseURL , {

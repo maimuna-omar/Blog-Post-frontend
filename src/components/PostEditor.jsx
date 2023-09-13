@@ -6,7 +6,7 @@ function PostEditor() {
   const { postId } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState({ title: '', content: '' }); // Set default values
-  const baseURL = "http://127.0.0.1:3001";
+  const baseURL = "https://blogpost-backend-v3oj.onrender.com";
 
   useEffect(() => {
     if (postId) { // Check for the existence of postId

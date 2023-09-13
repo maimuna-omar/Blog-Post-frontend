@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 
 function Dashboard() {
   const [userData, setUserData] = useState(null);
-  const baseURL = "http://127.0.0.1:3001";
+  const baseURL = "https://blogpost-backend-v3oj.onrender.com";
 
   useEffect(() => {
     const fetchUserData = async () => {
