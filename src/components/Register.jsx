@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
-const baseURL = "https://blogpost-backend-v3oj.onrender.com/register";
+const baseURL = "https://blogpost-backend-v3oj.onrender.com";
 
 function Register() {
   const initialUserData = {
