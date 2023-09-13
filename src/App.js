@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App flex flex-col min-h-screen bg-blue-100">
       <div className="flex justify-center items-center bg-blue-400 text-white w-full py-3">
-        <h1 className="text-5xl font-bold">FREE MIND BLOG</h1>
+        <h1 className="text-4xl font-bold">FREE MIND BLOG</h1>
       </div>
       
       <div className="flex-grow">
