@@ -2,16 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-
 function MyPosts() {
   const [posts, setPosts] = useState([]);
   const baseURL = "http://127.0.0.1:3001";
   const navigate = useNavigate();
-  console.log(posts)
 
   useEffect(() => {
     async function fetchPosts() {
-      const token = localStorage.getItem('token'); 
+      const token = localStorage.getItem('token');
 
       try {
         const response = await axios.get(`${baseURL}/user_posts`, {
@@ -20,7 +18,6 @@ function MyPosts() {
           }
         });
         setPosts(response.data);
-        navigate('/dashboard/myposts');
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
@@ -31,24 +28,27 @@ function MyPosts() {
 
   return (
     <div className="bg-gray-100 p-6">
-      <h2 className="text-xl font-bold mb-6">Your Posts</h2>
-      <ul>
-      {posts.map(post => (
-           <li key={post.id} className="bg-white shadow p-4 rounded mb-4">   
-            <h4 className="text-md font-medium mb-2">{post.title}</h4>
-            <p className="text-sm">{post.content}</p>
-            <button onClick={() => navigate(`/dashboard/edit-post/${post.id}`)}>Go to Edit</button>
-
-          </li>
+      <h2 className=" text-black text-5xl font-bold mb-6">MY POSTS</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {posts.map(post => (
+          <div key={post.id} className="bg-white border border-gray-800 rounded-lg overflow-hidden">
+            <div className="p-4">
+              <h4 className="text-4xl font-semibold mb-2">{post.title}</h4>
+              <p className="text-2xl mb-4">{post.content}</p>
+            </div>
+            <div className="flex justify-end p-4">
+              <button
+                onClick={() => navigate(`/dashboard/edit-post/${post.id}`)}
+                className="bg-blue-500 hover:bg-blue-100 text-white text-4xl font-bold py-2 px-4 rounded-full"
+              >
+                Edit Post
+              </button>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
 
 export default MyPosts;
-
-
-
-
-
