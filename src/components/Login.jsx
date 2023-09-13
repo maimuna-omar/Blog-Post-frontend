@@ -43,8 +43,8 @@ function Login() {
 
     try {
       const response = await axios.post(`${baseURL}/login`, userData);
-localStorage.setItem('userId', response.data.user.id); // Use response.data.user.id
-localStorage.setItem('token', response.data.token);
+      localStorage.setItem('userId', response.data.user.id); // Use response.data.user.id
+      localStorage.setItem('token', response.data.token);
 
             setMessage('Login successful!');
       // After successful login
@@ -107,58 +107,3 @@ localStorage.setItem('token', response.data.token);
 export default Login;
 
 
-// import React,{useState} from 'react'
-// import { Link } from 'react-router-dom'
-// import axios from 'axios';
-
-// const baseURL = "http://127.0.0.1:3001";
-
-// function Login() {
-//   const [userData, setUserData] = useState({
-//     email: '',
-//     password: ''
-//   });
-  
-//   const [message, setMessage] = useState('');
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setUserData(prevState => ({
-//       ...prevState,
-//       [name]: value
-//     }));
-//   }
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const response = await axios.post(`${baseURL}/login`, userData);
-//       localStorage.setItem('userId', response.data.id);
-//       setMessage('Login successful!');
-//     } catch (error) {
-//       setMessage('Invalid username or password.');
-//     }
-//   }
-
-  
-//   return (
-//     <div>
-//         <h1>Login</h1>
-//         <Link to ="/">Home</Link>
-//         <form onSubmit={handleSubmit}>
-//         <div>
-//           <label>email:</label>
-//           <input type="text" name="email" value={userData.email} onChange={handleChange} />
-//         </div>
-//         <div>
-//           <label>Password:</label>
-//           <input type="password" name="password" value={userData.password} onChange={handleChange} />
-//         </div>
-//         <button type="submit">Login</button>
-//       </form>
-//       {message && <p>{message}</p>}
-//     </div>
-//   );
-// }
-
-// export default Login;
